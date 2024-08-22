@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador3D</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        body{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
+        .background{
+            background-image: url(./Illustrative_Albedo_crie_uma_textura_simplista_e_minimalista_d_2.jpg) ;
+        }
+    </style>
+</head>
+    <body class="background">
+        <main>
+            <h1 style="font-size: 50px;">EXPLORADOR 3D</h1>
+            <div class="card">
+                <h2 class="card-header">MENU</h2>
+                <div class="card-body">
+                    <form action="sobre.html" method="get">
+                        <button class="button-sobre">Sobre o Projeto</button>
+                    </form>
+                    <form action="info.html" method="get">
+                        <button class="button-instrucao">Instruções</button>
+                    </form>
+                    <form action="index.html" method="get">
+                        <button class="button-jogar">Jogar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+    
