@@ -7,328 +7,37 @@
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="./scripts/main.js"></script>
-
-    <!--Fonte Texto-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        body{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
+        .background{
+            background-image: url(./Illustrative_Albedo_crie_uma_textura_simplista_e_minimalista_d_2.jpg) ;
+        }
+    </style>
 </head>
-<body>
-    <form action="menu.html" method="get">
-        <button id="Button"><i class="fas fa-home"></i> Página Inicial</button>
-    </form>
-    <form id="formApple">
-        <input type="hidden" name="modelo3d" value="apple">
-        <button class="BotaoModelo" style="top:70px; left: 10px;">Apple</button>
-    </form>
-    <form id="formMilk">
-        <input type="hidden" name="modelo3d" value="milk">
-        <button class="BotaoModelo" style="top:120px; left: 10px;">Milk</button>
-    </form>
-    <form id="formBee">
-        <input type="hidden" name="modelo3d" value="bee">
-        <button class="BotaoModelo" style="top: 170px; left: 10px;">Bee</button>
-    </form>
-    <form id="formBook">
-        <input type="hidden" name="modelo3d" value="book">
-        <button class="BotaoModelo" style="top: 220px; left: 10px;">Book</button>
-    </form>
-    <form id="formHat">
-        <input type="hidden" name="modelo3d" value="hat">
-        <button class="BotaoModelo" style="top: 270px; left: 10px;">Hat</button>
-    </form>
-    <form id="formPillow">
-        <input type="hidden" name="modelo3d" value="pillow">
-        <button class="BotaoModelo" style="top: 320px; left: 10px;">Pillow</button>
-    </form>
-    <form id="formChair">
-        <input type="hidden" name="modelo3d" value="chair">
-        <button class="BotaoModelo" style="top: 370px; left: 10px;">Chair</button>
-    </form>
-    <form id="formKey">
-        <input type="hidden" name="modelo3d" value="key">
-        <button class="BotaoModelo" style="top: 70px; left: 100px;">Key</button>
-    </form>
-    <form id="formClock">
-        <input type="hidden" name="modelo3d" value="clock">
-        <button class="BotaoModelo" style="top: 120px; left: 100px;">Clock</button>
-    </form>
-    <form id="formWizard">
-        <input type="hidden" name="modelo3d" value="wizard">
-        <button class="BotaoModelo" style="top: 170px; left: 100px;">Wizard</button>
-    </form>
-    <form id="formKeyboard">
-        <input type="hidden" name="modelo3d" value="keyboard">
-        <button class="BotaoModelo" style="top: 220px; left: 100px;">Keyboard</button>
-    </form>
-    <form id="formTreasure">
-        <input type="hidden" name="modelo3d" value="treausre">
-        <button class="BotaoModelo" style="top: 270px; left: 100px;">Treasure</button>
-    </form>
-    <form id="formBroom">
-        <input type="hidden" name="modelo3d" value="broom">
-        <button class="BotaoModelo" style="top: 320px; left: 100px;">Broom</button>
-    </form>
-    <form id="formOyster">
-        <input type="hidden" name="modelo3d" value="oyster">
-        <button class="BotaoModelo" style="top: 370px; left: 100px;">Oyster</button>
-    </form>
-    <form id="formSubmarine">
-        <input type="hidden" name="modelo3d" value="submarine">
-        <button class="BotaoModelo" style="top: 420px; left: 10px; width: 170px;">Submarine</button>
-    </form>
-    
-    <a-scene>
-        <a-assets>
-            <img id="boxTexture" src="./wood.jpg">
-            <img id="skyTexture" src="./Illustrative_Albedo_crie_uma_textura_simplista_e_minimalista_d_2.jpg">
-            <img id="groundTexture" src="./grass2.jpg">
-
-            <a-asset-item id="groundFlorest" src="./models/Floresta.glb"></a-asset-item>
-            <img id="skyTexture" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nsctotal.com.br%2Fnoticias%2Fceu-azul-planeta-curioso&psig=AOvVaw2JXbdUqjcHDT7Tph6S2NGa&ust=1724282189395000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCCoO3ZhIgDFQAAAAAdAAAAABAE">
-
-            <a-asset-item id="appleModel" src="./models/Maça.glb"></a-asset-item>
-            <a-asset-item id="milkModel" src="./models/Leite.glb"></a-asset-item>
-            <a-asset-item id="beeModel" src="./models/Abelha.glb"></a-asset-item>
-            <a-asset-item id="bookModel" src="./models/Livro.glb"></a-asset-item>
-            <a-asset-item id="hatModel" src="./models/Chapéu.glb"></a-asset-item>
-            <a-asset-item id="pillowModel" src="./models/Traveseiro.glb"></a-asset-item>
-            <a-asset-item id="chairModel" src="./models/Cadeira.glb"></a-asset-item>
-            <a-asset-item id="keyModel" src="./models/Chave.glb"></a-asset-item>
-            <a-asset-item id="clockModel" src="./models/Relógio.glb"></a-asset-item>
-            <a-asset-item id="wizardModel" src="./models/Mago.glb"></a-asset-item>
-            <a-asset-item id="keyboardModel" src="./models/Teclado.glb"></a-asset-item>
-            <a-asset-item id="treasureModel" src="./models/Tesouro.glb"></a-asset-item>
-            <a-asset-item id="broomModel" src="./models/Vasoura.glb"></a-asset-item>
-            <a-asset-item id="oysterModel" src="./models/Ostra.glb"></a-asset-item>
-            <a-asset-item id="submarineModel" src="./models/Submarino.glb"></a-asset-item>
-
-            <audio id="appleAudio" src="./audios/AudioApple.mp3"></audio>
-            <audio id="milkAudio" src="./audios/AudioMilk.mp3"></audio>
-            <audio id="beeAudio" src="./audios/AudioBee.mp3"></audio>
-            <audio id="bookAudio" src="./audios/AudioBook.mp3"></audio>
-            <audio id="hatAudio" src="./audios/AudioHat.mp3"></audio>
-            <audio id="pillowAudio" src="./audios/AudioPillow.mp3"></audio>
-            <audio id="chairAudio" src="./audios/AudioChair.mp3"></audio>
-            <audio id="keyAudio" src="./audios/AudioKey.mp3"></audio>
-            <audio id="clockAudio" src="./audios/AudioClock.mp3"></audio>
-            <audio id="wizardAudio" src="./audios/AudioWizard.mp3"></audio>
-            <audio id="keyboardAudio" src="./audios/AudioKeyboard.mp3"></audio>
-            <audio id="treasureAudio" src="./audios/AudioTreasure.mp3"></audio>
-            <audio id="broomAudio" src="./audios/AudioBroom.mp3"></audio>
-            <audio id="oysterAudio" src="./audios/AudioOyster.mp3"></audio>
-            <audio id="submarineAudio" src="./audios/AudioSubmarine.mp3"></audio>
-        </a-assets>
-
-        <a-gltf-model 
-            id="3dModel"
-            src="#appleModel"
-            position="0 1 -4" 
-            rotation="0 65 0" 
-            scale="1 1 1"
-            animation__position="property: object3D.position.y; to: 2; dir: alternate; dur: 2000; loop: true">
-        </a-gltf-model>
- 
-        <a-entity
-            geometry="primitive: plane; height: 1; width: 2"
-            position="0 0.5 -3"
-            material="color: yellow"
-            rotation="-90 0 0">
-        </a-entity>
-
-        <a-entity
-            id="textModel"
-            text="value: Apple; color: #2ea931; align: center; width: 2; font: mozillavr; anchor: center"
-            position="0 0.6 -3"
-            scale="4 4 4"
-            rotation="-90 0 0">
-        </a-entity>
-    
-
-        <!--<a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>-->
-
-        <a-gltf-model 
-            src="#groundFlorest"
-            scale="1 1 1"
-            position="0 -1 0">
-        </a-gltf-model>
-
-       <a-sky color="#e1f9ff"></a-sky>
-         <!--<a-sky src="#skyTexture"></a-sky>-->
-        <!--<a-light type="ambient" color="#445451"></a-light>-->
-        <a-light type="point" intensity="0.2" position="0 10 -30"></a-light>
-        <a-light type="point" intensity="0.5" position="0 0.5 0"></a-light>
-        
-        <a-light 
-        type="directional" 
-        color="#FFFFC0" 
-        intensity="2.0" 
-        angle="0.526" 
-        castShadow="true" 
-        shadowCameraFar="1024"
-        position="0 20 4">
-      </a-light>
-        
-        <a-camera position="0 3 0">
-            <!--<a-cursor></a-cursor>-->
-        </a-camera>
-    </a-scene>
-    
-</body>
+    <body class="background">
+        <main>
+            <h1 style="font-size: 50px;">EXPLORADOR 3D</h1>
+            <div class="card">
+                <h2 class="card-header">MENU</h2>
+                <div class="card-body">
+                    <form action="sobre.html" method="get">
+                        <button class="button-sobre">Sobre o Projeto</button>
+                    </form>
+                    <form action="info.html" method="get">
+                        <button class="button-instrucao">Instruções</button>
+                    </form>
+                    <form action="game.html" method="get">
+                        <button class="button-jogar">Jogar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
-
-<script>
-   /* Botão apple */
-  document.getElementById('formApple').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#appleModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Apple; color: #2ea931');
-
-      var clickSound = document.getElementById('appleAudio');
-      clickSound.play();
-  });
-
-  /* Botão milk */
-  document.getElementById('formMilk').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#milkModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Milk; color: #2ea931');
-
-      var clickSound = document.getElementById('milkAudio');
-      clickSound.play();
-  });
-
-    /* Botão bee */
-  document.getElementById('formBee').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#beeModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Bee; color: #2ea931');
-
-      var clickSound = document.getElementById('beeAudio');
-      clickSound.play();
-  });
-
-  /* Botão book */
-  document.getElementById('formBook').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#bookModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Book; color: #2ea931');
-
-      var clickSound = document.getElementById('bookAudio');
-      clickSound.play();
-  });
-
-  /* Botão hat */
-  document.getElementById('formHat').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#hatModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Hat; color: #2ea931');
-
-      var clickSound = document.getElementById('hatAudio');
-      clickSound.play();
-    });
-
-  /* Botão pillow */
-  document.getElementById('formPillow').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#pillowModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Pillow; color: #2ea931');
-
-      var clickSound = document.getElementById('pillowAudio');
-      clickSound.play();
-  });
-
-  /* Botão chair */
-  document.getElementById('formChair').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#chairModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Chair; color: #2ea931');
-
-      var clickSound = document.getElementById('chairAudio');
-      clickSound.play();
-  });
-
-  /* Botão key */
-  document.getElementById('formKey').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#keyModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Key; color: #2ea931');
-
-      var clickSound = document.getElementById('keyAudio');
-      clickSound.play();
-  });
-
-  /* Botão clock */
-  document.getElementById('formClock').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#clockModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Clock; color: #2ea931');
-
-      var clickSound = document.getElementById('clockAudio');
-      clickSound.play();
-  });
-
-  /* Botão wizard */
-  document.getElementById('formWizard').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#wizardModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Wizard; color: #2ea931');
-      
-      var clickSound = document.getElementById('wizardAudio');
-      clickSound.play();
-  });
-
-  /* Botão keyboard */
-  document.getElementById('formKeyboard').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#keyboardModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Keyboard; color: #2ea931');
-
-      var clickSound = document.getElementById('keyboardAudio');
-      clickSound.play();
-  });
-
-  /* Botão treasure */
-  document.getElementById('formTreasure').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#treasureModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Treasure; color: #2ea931');
-
-      var clickSound = document.getElementById('treasureAudio');
-      clickSound.play();
-  });
-
-
-  /* Botão broom */
-  document.getElementById('formBroom').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#broomModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Broom; color: #2ea931');
-
-      var clickSound = document.getElementById('broomAudio');
-      clickSound.play();
-  });
-
-  /* Botão oyster */
-  document.getElementById('formOyster').addEventListener('submit', function(event) {
-      event.preventDefault();
-      var model14 = document.getElementById('3dModel').setAttribute('src', '#oysterModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Oyster; color: #2ea931');
-
-      var clickSound = document.getElementById('oysterAudio');
-      clickSound.play();
-  });
-
-  /* Botão submarine */
-  document.getElementById('formSubmarine').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('3dModel').setAttribute('src', '#submarineModel');
-      document.getElementById('textModel').setAttribute('text', 'value: Submarine; color: #2ea931');
-
-      var clickSound = document.getElementById('submarineAudio');
-      clickSound.play();
-  });
-
-</script>
+    
