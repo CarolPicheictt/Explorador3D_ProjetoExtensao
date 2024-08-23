@@ -16,69 +16,74 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <form action="index.html" method="get">
-        <button id="Button"><i class="fas fa-home"></i> Página Inicial</button>
-    </form>
-    <form id="formApple">
-        <input type="hidden" name="modelo3d" value="apple">
-        <button class="BotaoModelo" style="top:70px; left: 10px;">Apple</button>
-    </form>
-    <form id="formMilk">
-        <input type="hidden" name="modelo3d" value="milk">
-        <button class="BotaoModelo" style="top:120px; left: 10px;">Milk</button>
-    </form>
-    <form id="formBee">
-        <input type="hidden" name="modelo3d" value="bee">
-        <button class="BotaoModelo" style="top: 170px; left: 10px;">Bee</button>
-    </form>
-    <form id="formBook">
-        <input type="hidden" name="modelo3d" value="book">
-        <button class="BotaoModelo" style="top: 220px; left: 10px;">Book</button>
-    </form>
-    <form id="formHat">
-        <input type="hidden" name="modelo3d" value="hat">
-        <button class="BotaoModelo" style="top: 270px; left: 10px;">Hat</button>
-    </form>
-    <form id="formPillow">
-        <input type="hidden" name="modelo3d" value="pillow">
-        <button class="BotaoModelo" style="top: 320px; left: 10px;">Pillow</button>
-    </form>
-    <form id="formChair">
-        <input type="hidden" name="modelo3d" value="chair">
-        <button class="BotaoModelo" style="top: 370px; left: 10px;">Chair</button>
-    </form>
-    <form id="formKey">
-        <input type="hidden" name="modelo3d" value="key">
-        <button class="BotaoModelo" style="top: 70px; left: 100px;">Key</button>
-    </form>
-    <form id="formClock">
-        <input type="hidden" name="modelo3d" value="clock">
-        <button class="BotaoModelo" style="top: 120px; left: 100px;">Clock</button>
-    </form>
-    <form id="formWizard">
-        <input type="hidden" name="modelo3d" value="wizard">
-        <button class="BotaoModelo" style="top: 170px; left: 100px;">Wizard</button>
-    </form>
-    <form id="formKeyboard">
-        <input type="hidden" name="modelo3d" value="keyboard">
-        <button class="BotaoModelo" style="top: 220px; left: 100px;">Keyboard</button>
-    </form>
-    <form id="formTreasure">
-        <input type="hidden" name="modelo3d" value="treausre">
-        <button class="BotaoModelo" style="top: 270px; left: 100px;">Treasure</button>
-    </form>
-    <form id="formBroom">
-        <input type="hidden" name="modelo3d" value="broom">
-        <button class="BotaoModelo" style="top: 320px; left: 100px;">Broom</button>
-    </form>
-    <form id="formOyster">
-        <input type="hidden" name="modelo3d" value="oyster">
-        <button class="BotaoModelo" style="top: 370px; left: 100px;">Oyster</button>
-    </form>
-    <form id="formSubmarine">
-        <input type="hidden" name="modelo3d" value="submarine">
-        <button class="BotaoModelo" style="top: 420px; left: 10px; width: 170px;">Submarine</button>
-    </form>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <button id="ButtonSidebar">&#x22EE;</button>
+    </div>
+        <div id="sidebar" class="sidebar">
+            <form action="index.html" method="get">
+                <button id="Button"><i class="fas fa-home" style="padding-bottom: 5px;"></i><br> Página Inicial</button>
+            </form>
+            <form id="formApple">
+                <input type="hidden" name="modelo3d" value="apple">
+                <button class="BotaoModelo" style="top:70px; left: 10px;">Apple</button>
+            </form>
+            <form id="formMilk">
+                <input type="hidden" name="modelo3d" value="milk">
+                <button class="BotaoModelo" style="top:120px; left: 10px;">Milk</button>
+            </form>
+            <form id="formBee">
+                <input type="hidden" name="modelo3d" value="bee">
+                <button class="BotaoModelo" style="top: 170px; left: 10px;">Bee</button>
+            </form>
+            <form id="formBook">
+                <input type="hidden" name="modelo3d" value="book">
+                <button class="BotaoModelo" style="top: 220px; left: 10px;">Book</button>
+            </form>
+            <form id="formHat">
+                <input type="hidden" name="modelo3d" value="hat">
+                <button class="BotaoModelo" style="top: 270px; left: 10px;">Hat</button>
+            </form>
+            <form id="formPillow">
+                <input type="hidden" name="modelo3d" value="pillow">
+                <button class="BotaoModelo" style="top: 320px; left: 10px;">Pillow</button>
+            </form>
+            <form id="formChair">
+                <input type="hidden" name="modelo3d" value="chair">
+                <button class="BotaoModelo" style="top: 370px; left: 10px;">Chair</button>
+            </form>
+            <form id="formKey">
+                <input type="hidden" name="modelo3d" value="key">
+                <button class="BotaoModelo" style="top: 70px; left: 100px;">Key</button>
+            </form>
+            <form id="formClock">
+                <input type="hidden" name="modelo3d" value="clock">
+                <button class="BotaoModelo" style="top: 120px; left: 100px;">Clock</button>
+            </form>
+            <form id="formWizard">
+                <input type="hidden" name="modelo3d" value="wizard">
+                <button class="BotaoModelo" style="top: 170px; left: 100px;">Wizard</button>
+            </form>
+            <form id="formKeyboard">
+                <input type="hidden" name="modelo3d" value="keyboard">
+                <button class="BotaoModelo" style="top: 220px; left: 100px;">Keyboard</button>
+            </form>
+            <form id="formTreasure">
+                <input type="hidden" name="modelo3d" value="treausre">
+                <button class="BotaoModelo" style="top: 270px; left: 100px;">Treasure</button>
+            </form>
+            <form id="formBroom">
+                <input type="hidden" name="modelo3d" value="broom">
+                <button class="BotaoModelo" style="top: 320px; left: 100px;">Broom</button>
+            </form>
+            <form id="formOyster">
+                <input type="hidden" name="modelo3d" value="oyster">
+                <button class="BotaoModelo" style="top: 370px; left: 100px;">Oyster</button>
+            </form>
+            <form id="formSubmarine">
+                <input type="hidden" name="modelo3d" value="submarine">
+                <button class="BotaoModelo" style="top: 420px; left: 10px; width: 170px;">Submarine</button>
+            </form>
+        </div>
     
     <a-scene>
         <a-assets>
